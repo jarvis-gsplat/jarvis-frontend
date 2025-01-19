@@ -1,0 +1,93 @@
+/* Button.css */
+:root {
+  --button-primary: #E30022;
+  --button-secondary: #D3AF37;
+  --button-shadow: rgba(94, 203, 233, 0.2);
+  --transition-speed: 0.3s;
+}
+
+.custom-button {
+  padding: 0.5rem 1.5rem;
+  border-radius: 40px;
+  border: 0px solid transparent;
+  background-color: #f8f9fa;
+  color: #212529;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  user-select: none;
+  transition: all var(--transition-speed) ease;
+}
+
+.custom-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--button-shadow);
+}
+
+.effect1.custom-button {
+    transition: transform var(--transition-speed) ease-out,
+                background-color var(--transition-speed) ease-in-out,
+                color var(--transition-speed) ease-in-out;
+}
+
+.effect1.custom-button:hover,
+.effect1.custom-button:focus {
+    transform: scale(1.1);
+    background-color: var(--button-secondary);
+    color: white;
+}
+
+.effect2.custom-button {
+    transition: box-shadow var(--transition-speed) ease-in-out,
+                border-radius var(--transition-speed) ease-in-out;
+}
+
+.effect2.custom-button:hover,
+.effect2.custom-button:focus {
+    box-shadow: 0 4px 8px var(--button-shadow);
+    border-radius: 20px;
+}
+
+.effect3.custom-button {
+    transition: transform var(--transition-speed) ease-in-out,
+                background-position 0.5s ease;
+    background-image: linear-gradient(to left, #f8f9fa 50%, var(--button-primary) 10%);
+    background-size: 200% 150%;
+    background-position: right bottom;
+}
+
+.effect3.custom-button:hover,
+.effect3.custom-button:focus {
+    transform: translateX(10px);
+    background-position: left bottom;
+    color: white;
+}
+
+.effect4.custom-button {
+    transition: transform var(--transition-speed) cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.effect4.custom-button:hover,
+.effect4.custom-button:focus {
+    transform: rotate(45deg);
+}
+
+.effect5.custom-button {
+    transition: transform var(--transition-speed) cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.effect5.custom-button:hover,
+.effect5.custom-button:focus {
+    transform: scaleX(-1);
+}
+
+.app-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.app-link Button {
+  margin-top: 20px;
+}
