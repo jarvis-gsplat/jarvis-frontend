@@ -1,25 +1,6 @@
-# AI Screenwriter
+# Repo for the Frontend components of JARVIS.
 
-The application "Screenwriter GPT" is a template designed to generate fake movie scenes based on user-entered quotes, using the built-in OpenAI connection. It stores movie titles and quotes fetched from the Hugging Face dataset, alongside vector embeddings produced by the OpenAI API. The app also manages user signups and information.
+## Description:
+Made with [gadget](https://gadget.dev/) ❤️. The front end utilized Gadget as well as React Native in order to access the uploaded splats (3d models) on our website, https://jarvis.diy. Users are able to search using both the ID of the upload and see a list of uploads by username, as well as popular community uploads of splats. It additionally makes use of O2 auth, allowing users to login using email addresses, google accounts, and more. 
 
-[![Fork template](https://img.shields.io/badge/Fork%20template-%233A0CFF?style=for-the-badge)](https://app.gadget.dev/auth/fork?domain=ai-screenwriter-template.gadget.app)
-
-## Key features
-
-- Models
-
-  - Movie: Stores movie titles, quotes, and vector embeddings
-  - User: Manages signups and user information.
-
-- Global actions:
-
-  - `ingestData`: Fetches movie data from Hugging Face, sends it to OpenAI for embeddings, and stores the results.
-  - `findSimilarMovies`: Uses a user-submitted quote to find similar quotes from the database and generates screenplay suggestions based on vector embeddings.
-
-- Routes
-
-  - `POST-chat`: Streams responses from the OpenAI API to the client.
-
-- Frontend
-
-  - `App.jsx`: Manages routing for the application's frontend.
+While there are no explicit requirements, rendering the 3d models and our home page (with some graphics) can be quite taxing on lower-end systems.
