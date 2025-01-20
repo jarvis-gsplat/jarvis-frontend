@@ -26,6 +26,7 @@ import ResetPasswordPage from "./routes/reset-password";
 import VerifyEmailPage from "./routes/verify-email";
 import ChangePassword from "./routes/change-password";
 import ForgotPassword from "./routes/forgot-password";
+import AboutPage from "./routes/about"
 
 const App = () => {
   useEffect(() => {
@@ -85,6 +86,7 @@ const App = () => {
         />
         <Route path="reset-password" element={<ResetPasswordPage />} />
         <Route path="verify-email" element={<VerifyEmailPage />} />
+        <Route path="about" element={<AboutPage />} />
       </Route>
     )
   );
@@ -124,10 +126,13 @@ const Header = () => {
     <div className="header">
       {/* Make the logo clickable */}
       <Link to="/" className="logo-link">
-        <div className="logo">{process.env.GADGET_PUBLIC_APP_SLUG}</div>
+        <div className="logo">jarvis</div>
       </Link>
 
       <div className="header-content">
+        <a href="https://dorahacks.io/buidl/21579" className="logo-link" target="_blank" rel="noopener noreferrer">
+          about
+        </a>
         <SignedOut>
           <Link to="/sign-in" className="logo-link">
             sign in

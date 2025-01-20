@@ -72,15 +72,6 @@ export default function () {
 
   const currentResult = results[currentIndex];
 
-  const scrollToCommunity = () => {
-    if (communityRef.current) {
-      communityRef.current.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    }
-  };
-
   useEffect(() => {
     handleExploreMore(); // Fetch all splats on component mount
   }, []);
@@ -96,9 +87,12 @@ export default function () {
             height: "auto",
           }}
         />
-        <p className="logo">
-          Automatically visualize everyday life's moments in realtime 3D, powered by GPU-trained gaussian splatting models!
+        <p className="tagline">
+          Capture and visualize life's moments in realtime 3D, powered by{" "}
+          <a target="_blank" href="https://dorahacks.io/buidl/21579" className="tagline">GPU-trained gaussian splatting models!
+          </a>
         </p>
+
       </div>
 
       <div ref={searchBarRef} className="app-link">
@@ -192,41 +186,26 @@ export default function () {
       )}
 
       {results.length > 0 && (
-  <div ref={buttonsRef} style={{ marginBottom: "10px" }}>
-    <p className="logo">
-      Showing result {currentIndex + 1} of {results.length}
-    </p>
-    <div>
-      <Button
-        text="Previous"
-        effectType="effect1"
-        onClick={handlePrevious}
-        disabled={currentIndex === 0}
-      />
-      <Button
-        text="Next"
-        effectType="effect1"
-        onClick={handleNext}
-        disabled={currentIndex === results.length - 1}
-      />
-    </div>
-  </div>
-)}
-
-
-      {/* Add Down Arrow Icon */}
-      <div
-  style={{
-    textAlign: "center",
-    cursor: "pointer",
-    marginTop: "0px",
-    paddingTop: "0px",  // Add top padding
-    paddingBottom: "0px",  // Add bottom padding
-  }}
-  onClick={scrollToCommunity}
->
-  <i className="fas fa-angle-down" style={{ fontSize: "30px", color: "white" }}></i>
-</div>
+        <div ref={buttonsRef} style={{ marginBottom: "10px" }}>
+          <p className="logo">
+            Showing result {currentIndex + 1} of {results.length}
+          </p>
+          <div>
+            <Button
+              text="Previous"
+              effectType="effect1"
+              onClick={handlePrevious}
+              disabled={currentIndex === 0}
+            />
+            <Button
+              text="Next"
+              effectType="effect1"
+              onClick={handleNext}
+              disabled={currentIndex === results.length - 1}
+            />
+          </div>
+        </div>
+      )}
 
       {/* Explore More Section */}
       <div

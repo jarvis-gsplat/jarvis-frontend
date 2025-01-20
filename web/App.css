@@ -11,6 +11,10 @@ button {
   cursor: pointer;
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
 body {
 
 background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 100%);
@@ -469,9 +473,9 @@ background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 100%
   border: none;
   background: transparent;
   cursor: pointer;
-  color: red; /* Red color for the icon */
+  color: #FF5330; /* Red color for the icon */
   font-size: 1.2rem;
-  top: 15%; /* Vertically center the icon */
+  top: 12%; /* Vertically center the icon */
   transform: translateY(-50%); /* Adjust the icon to be exactly centered */
 }
 
@@ -484,4 +488,18 @@ background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 100%
   justify-content: space-between; /* Distributes space between the two buttons */
   align-items: center;
   width: 100%;
+}
+
+.tagline {
+  color: white !important;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 30px;
+}
+
+.tagline-link {
+  color: white !important;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 30px;
 }
