@@ -173,7 +173,7 @@ export default function () {
               }}
             >
               <a
-                href={`http://antimatter15.com/splat/?url=${currentResult.url}`}
+                href={`/splat.html?url=${currentResult.url}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{ color: "inherit", fontSize: "20px" }}
@@ -274,7 +274,7 @@ export default function () {
                   }}
                 >
                   <a
-                    href={`http://antimatter15.com/splat/?url=${splat.url}`}
+                    href={`/splat.html?url=${splat.url}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     style={{ color: "inherit", fontSize: "20px" }}
