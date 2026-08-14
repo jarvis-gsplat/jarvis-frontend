@@ -1,0 +1,8 @@
+# Legacy Gadget application files. The deployed app is the Next.js app in app/.
+/api/
+/accessControl/
+/web/
+/settings.gadget.ts
+/vite.config.mjs
+/index.html
+/yarn.lock

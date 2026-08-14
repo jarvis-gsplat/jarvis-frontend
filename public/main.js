@@ -743,12 +743,10 @@ async function main() {
         viewMatrix = JSON.parse(decodeURIComponent(location.hash.slice(1)));
         carousel = false;
     } catch (err) {}
-    const url = new URL(
-        // "nike.splat",
-        // location.href,
-        params.get("url") || "train.splat",
-        "https://huggingface.co/cakewalk/splat-data/resolve/main/",
-    );
+    const requestedUrl = params.get("url");
+    const url = requestedUrl
+        ? new URL(requestedUrl, location.origin)
+        : new URL("train.splat", "https://huggingface.co/cakewalk/splat-data/resolve/main/");
     const req = await fetch(url, {
         mode: "cors", // no-cors, *cors, same-origin
         credentials: "omit", // include, *same-origin, omit
